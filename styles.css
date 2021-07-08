@@ -1,0 +1,105 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#form-wrapper {
+  width: 100%;
+}
+
+#cv-form {
+  width: 1000px;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-wrapper {
+  margin-top: 30px;
+  width: 40%;
+}
+
+.input-wrapper input,
+select {
+  border-radius: 6px;
+  height: 35px;
+  border: 1px solid grey;
+}
+.input-wrapper input,
+label,
+select {
+  font-size: 17px;
+  width: 100%;
+  margin: auto;
+}
+
+.input-wrapper label {
+  margin-bottom: 10px;
+}
+
+.input-wrapper input:focus {
+  border: 1px solid grey;
+}
+.input-description {
+  width: 100%;
+}
+.input-description textarea {
+  width: 100%;
+  resize: none;
+  height: 150px;
+  text-align: left;
+  font-size: 17px;
+  border-radius: 6px;
+}
+.select-file {
+  margin-top: 40px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+#select-file-label {
+  display: inline;
+  margin-right: 10px;
+}
+
+.button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.button input {
+  width: 300px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #2fce4f;
+  background-color: #2fce4f;
+  font-size: 18px;
+  color: white;
+}
+
+@media only screen and (max-width: 1100px) {
+  #cv-form {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .input-wrapper {
+    margin-top: 30px;
+    width: 90%;
+  }
+  .button {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+}

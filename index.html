@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CV Form - Maciej Myszczynski</title>
+  </head>
+  <body>
+    <div id="form-wrapper">
+      <form id="cv-form" action="" method="post">
+        <div class="input-wrapper">
+          <label for="fname">First Name</label><br />
+          <input type="text" id="fname" />
+        </div>
+        <div class="input-wrapper">
+          <label for="lname">Last Name</label><br />
+          <input type="text" id="lname" />
+        </div>
+        <div class="input-wrapper">
+          <label for="email">Email</label><br />
+          <input type="text" id="email" />
+        </div>
+        <div class="input-wrapper">
+          <label for="telephone">Telephone Number</label><br />
+          <input type="text" id="telephone" />
+        </div>
+        <div class="input-wrapper">
+          <label for="address1">Address 1</label><br />
+          <input type="text" id="address1" />
+        </div>
+        <div class="input-wrapper">
+          <label for="address2">Address 2</label><br />
+          <input type="text" id="address2" />
+        </div>
+        <div class="input-wrapper">
+          <label for="town">Town</label><br />
+          <input type="text" id="town" />
+        </div>
+        <div class="input-wrapper">
+          <label for="county">County</label><br />
+          <input type="text" id="county" />
+        </div>
+        <div class="input-wrapper">
+          <label for="postcode">Post Code</label><br />
+          <input type="text" id="postcode" />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="country">Country</label><br />
+          <select name="country" id="country">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
+        <div class="input-wrapper input-description">
+          <label for="description">Description</label><br />
+          <textarea id="description"></textarea>
+        </div>
+
+        <div class="select-file">
+          <label for="myfile">Your CV</label> <br />
+          <label id="select-file-label" for="myfile">Select files </label>
+          <input type="file" id="myfile" name="myfile" multiple /><br /><br />
+        </div>
+        <div class="button">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
