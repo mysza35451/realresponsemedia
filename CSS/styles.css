@@ -43,6 +43,11 @@ select {
 .input-wrapper input:focus {
   border: 1px solid grey;
 }
+
+.wrong-input {
+  border: 1px solid red !important;
+}
+
 .input-description {
   width: 100%;
 }
@@ -81,6 +86,14 @@ label {
   background-color: #2fce4f;
   font-size: 18px;
   color: white;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
 }
 
 @media only screen and (max-width: 1100px) {

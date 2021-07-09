@@ -4,61 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
     <title>CV Form - Maciej Myszczynski</title>
   </head>
   <body>
     <div id="form-wrapper">
       <form id="cv-form" action="" method="post">
         <div class="input-wrapper">
-          <label for="fname">First Name</label><br />
-          <input type="text" id="fname" />
+          <label for="fname">First Name *</label><br />
+          <input type="text" id="fname" class="required" autofocus />
         </div>
         <div class="input-wrapper">
-          <label for="lname">Last Name</label><br />
-          <input type="text" id="lname" />
+          <label for="lname">Last Name *</label><br />
+          <input type="text" id="lname" class="required" />
         </div>
         <div class="input-wrapper">
-          <label for="email">Email</label><br />
-          <input type="text" id="email" />
+          <label for="email">Email *</label><br />
+          <input type="text" id="email" class="required" />
         </div>
         <div class="input-wrapper">
-          <label for="telephone">Telephone Number</label><br />
-          <input type="text" id="telephone" />
+          <label for="telephone">Telephone Number *</label><br />
+          <input type="text" id="telephone" class="required" />
         </div>
         <div class="input-wrapper">
-          <label for="address1">Address 1</label><br />
-          <input type="text" id="address1" />
+          <label for="address1">Address 1 *</label><br />
+          <input type="text" id="address1" class="required" />
         </div>
         <div class="input-wrapper">
           <label for="address2">Address 2</label><br />
           <input type="text" id="address2" />
         </div>
         <div class="input-wrapper">
-          <label for="town">Town</label><br />
-          <input type="text" id="town" />
+          <label for="town">Town *</label><br />
+          <input type="text" id="town" class="required" />
         </div>
         <div class="input-wrapper">
           <label for="county">County</label><br />
           <input type="text" id="county" />
         </div>
         <div class="input-wrapper">
-          <label for="postcode">Post Code</label><br />
-          <input type="text" id="postcode" />
+          <label for="postcode">Post Code*</label><br />
+          <input type="text" id="postcode" class="required" />
         </div>
 
         <div class="input-wrapper">
-          <label for="country">Country</label><br />
+          <label for="country">Country *</label><br />
           <select name="country" id="country">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+            <option value="uk">Select...</option>
+            <option value="uk">United Kingdom</option>
+            <option value="poland">Poland</option>
+            <option value="spain">Spain</option>
+            <option value="france">France</option>
           </select>
         </div>
         <div class="input-wrapper input-description">
           <label for="description">Description</label><br />
           <textarea id="description"></textarea>
+
+          <p id="empty-input" class="warning hidden">
+            Please make sure you fill up the required fields marked with *
+          </p>
+          <p id="wrong-phone-input" class="warning hidden">
+            Incorrect telephone number format - please use UK mobile number
+          </p>
+          <p class="warning hidden">Invalid post code</p>
+          <p id="wrong-email-input" class="warning hidden">
+            Invalid email address
+          </p>
         </div>
 
         <div class="select-file">
@@ -70,6 +82,7 @@
           <input type="submit" />
         </div>
       </form>
+      <script src="/JS/input-validation.js"></script>
     </div>
   </body>
 </html>
