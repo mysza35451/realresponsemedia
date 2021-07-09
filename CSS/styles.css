@@ -47,6 +47,9 @@ select {
 .wrong-input {
   border: 1px solid red !important;
 }
+.wrong-input-null {
+  border: 1px solid red !important;
+}
 
 .input-description {
   width: 100%;
