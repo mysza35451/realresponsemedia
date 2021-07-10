@@ -2,6 +2,7 @@ let requiredInputs = document.querySelectorAll(".required");
 let phone = document.querySelector("#telephone");
 let emailAddress = document.querySelector("#email");
 let postcode = document.querySelector("#postcode");
+let country = document.querySelector("#country");
 
 phone.addEventListener("blur", (event) => {
   let element = document.getElementById(phone.id);
@@ -17,6 +18,11 @@ postcode.addEventListener("blur", (event) => {
   postcodeValidation(event.target.value, element);
 });
 
+country.addEventListener("blur", (event) => {
+  let element = document.getElementById(country.id);
+  countryValidation(event.target.value, element);
+});
+
 for (let x = 0; x < requiredInputs.length; x++) {
   console.log(requiredInputs[x].id);
   requiredInputs[x].addEventListener("blur", (event) => {
@@ -26,7 +32,7 @@ for (let x = 0; x < requiredInputs.length; x++) {
     displayNullInputWarning();
   });
 }
-//warning messages
+//warning messages -----------------------------------------------------------
 let wrongNoInputCounter = 0;
 let warningMessageNoInput = document.getElementById("empty-input");
 let warningMessageWrongPhone = document.getElementById("wrong-phone-input");
@@ -34,6 +40,7 @@ let warningMessageWrongEmail = document.getElementById("wrong-email-input");
 let warningMessageWrongPostCode = document.getElementById(
   "wrong-postcode-input"
 );
+let warningMessageNoCountry = document.getElementById("wrong-country-input");
 
 function checkIfNull(value, element) {
   if (value == "") {
@@ -41,15 +48,6 @@ function checkIfNull(value, element) {
   } else {
     try {
       element.classList.remove("wrong-input-null");
-    } catch (error) {}
-  }
-}
-function checkOption(value, element) {
-  if (value == "Select...") {
-    element.classList.add("wrong-input");
-  } else {
-    try {
-      element.classList.remove("wrong-input");
     } catch (error) {}
   }
 }
@@ -89,6 +87,17 @@ function postcodeValidation(value, element) {
   } else {
     element.classList.remove("wrong-input");
     warningMessageWrongPostCode.classList.add("hidden");
+  }
+}
+
+function countryValidation(value, element) {
+  console.log(value);
+  if (value == "none") {
+    element.classList.add("wrong-input");
+    warningMessageNoCountry.classList.remove("hidden");
+  } else {
+    element.classList.remove("wrong-input");
+    warningMessageNoCountry.classList.add("hidden");
   }
 }
 

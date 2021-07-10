@@ -47,10 +47,10 @@
           <input type="text" id="postcode" class="required" />
         </div>
 
-        <div class="input-wrapper">
+        <div id="select" class="input-wrapper">
           <label for="country">Country *</label><br />
-          <select name="country" id="country">
-            <option value="uk">Select...</option>
+          <select class="required" name="country" id="country">
+            <option value="none">Select...</option>
             <option value="uk">United Kingdom</option>
             <option value="poland">Poland</option>
             <option value="spain">Spain</option>
@@ -60,6 +60,8 @@
         <div class="input-wrapper input-description">
           <label for="description">Description</label><br />
           <textarea id="description"></textarea>
+
+          <!-- Warning messages with default display:none; -->
 
           <p id="empty-input" class="warning hidden">
             Please make sure you fill up the required fields marked with *
@@ -73,6 +75,11 @@
           <p id="wrong-email-input" class="warning hidden">
             Invalid email address
           </p>
+          <p id="wrong-country-input" class="warning hidden">
+            No country selected
+          </p>
+
+          <!-- End of warning messages -->
         </div>
 
         <div class="select-file">

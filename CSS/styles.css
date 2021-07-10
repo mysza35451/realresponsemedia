@@ -25,9 +25,10 @@ body {
 .input-wrapper input,
 select {
   border-radius: 6px;
-  height: 35px;
+  height: 45px;
   border: 1px solid grey;
 }
+
 .input-wrapper input,
 label,
 select {
@@ -36,12 +37,19 @@ select {
   margin: auto;
 }
 
+.input-wrapper select {
+  width: 101%;
+}
+
 .input-wrapper label {
   margin-bottom: 10px;
 }
 
-.input-wrapper input:focus {
-  border: 1px solid grey;
+.input-wrapper input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  border: 2px solid grey !important;
 }
 
 .wrong-input {
