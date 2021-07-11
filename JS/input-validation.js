@@ -1,9 +1,12 @@
+//selecting elements for validation
+
 let requiredInputs = document.querySelectorAll(".required");
 let phone = document.querySelector("#telephone");
 let emailAddress = document.querySelector("#email");
 let postcode = document.querySelector("#postcode");
 let country = document.querySelector("#country");
 
+//independent event listeners for unique validations
 phone.addEventListener("blur", (event) => {
   let element = document.getElementById(phone.id);
   phoneNumber(event.target.value, element);
@@ -23,6 +26,7 @@ country.addEventListener("blur", (event) => {
   countryValidation(event.target.value, element);
 });
 
+//dynamic validation for detecting null values on required fields
 for (let x = 0; x < requiredInputs.length; x++) {
   console.log(requiredInputs[x].id);
   requiredInputs[x].addEventListener("blur", (event) => {

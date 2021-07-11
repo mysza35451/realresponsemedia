@@ -9,39 +9,47 @@
   </head>
   <body>
     <div id="form-wrapper">
-      <form id="cv-form" action="" method="post">
+      <form id="cv-form" action="./PHP/send-email.php" method="post">
         <div class="input-wrapper">
           <label for="fname">First Name *</label><br />
           <input type="text" id="fname" class="required" autofocus />
         </div>
+
         <div class="input-wrapper">
           <label for="lname">Last Name *</label><br />
           <input type="text" id="lname" class="required" />
         </div>
+
         <div class="input-wrapper">
           <label for="email">Email *</label><br />
           <input type="text" id="email" class="required" />
         </div>
+
         <div class="input-wrapper">
           <label for="telephone">Telephone Number *</label><br />
           <input type="text" id="telephone" class="required" />
         </div>
+
         <div class="input-wrapper">
           <label for="address1">Address 1 *</label><br />
           <input type="text" id="address1" class="required" />
         </div>
+
         <div class="input-wrapper">
           <label for="address2">Address 2</label><br />
           <input type="text" id="address2" />
         </div>
+
         <div class="input-wrapper">
           <label for="town">Town *</label><br />
           <input type="text" id="town" class="required" />
         </div>
+
         <div class="input-wrapper">
           <label for="county">County</label><br />
           <input type="text" id="county" />
         </div>
+
         <div class="input-wrapper">
           <label for="postcode">Post Code*</label><br />
           <input type="text" id="postcode" class="required" />
@@ -82,13 +90,18 @@
           <!-- End of warning messages -->
         </div>
 
+        <!-- select file element -->
+
         <div class="select-file">
           <label for="myfile">Your CV</label> <br />
           <label id="select-file-label" for="myfile">Select files </label>
           <input type="file" id="myfile" name="myfile" multiple /><br /><br />
         </div>
+
+        <!-- end of select file element -->
+
         <div class="button">
-          <input type="submit" />
+          <input type="submit" name="send_message_btn" />
         </div>
       </form>
       <script src="./JS/input-validation.js"></script>
